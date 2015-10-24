@@ -1,4 +1,4 @@
- #include "MyStrategy.h"
+#include "MyStrategy.h"
 
 #define _USE_MATH_DEFINES
 #include <cmath>
