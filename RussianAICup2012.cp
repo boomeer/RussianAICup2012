@@ -261,58 +261,6 @@ struct GlobalParams
 
     GlobalParams()
     {
-        /*crew_danger_att = 0.4;
-        hull_danger_att = 0.3;
-        ang_spd_account = 0.1;
-        medkit_score = 2.5;
-        repkit_score = 0.4;
-        ammo_score = 0.2;
-        obst_danger = 30;
-        phys_lookahead = 50;
-        rot_bonus = 10;
-        tg_border = 8;
-        tg_lookahead = 600;
-        tg_prem_danger = 0;
-        tg_ang_att = 0.07;
-        tg_base_score = 0.8;
-        tg_prem_bonus = 3;
-        tg_prem_offs = 2;
-        tg_fire_thr = 0.25;
-        aggr_factor = 1.2;
-        aggr_lookahead = 30000;
-        team_force = 0.08;
-        team_dist = 250;
-        dng_ang_att = 6;
-        dng_lookahead = 100;
-        prem_danger = 0.5;
-        hit_danger = 4000;*/
-
-        /*crew_danger_att = 0.7;
-        hull_danger_att = 0.15;
-        ang_spd_account = 0.5;
-        medkit_score = 5;
-        repkit_score = 0.3;
-        ammo_score = 1;
-        obst_danger = 8;
-        phys_lookahead = 70;
-        rot_bonus = 2;
-        tg_border = 8;
-        tg_lookahead = 200;
-        tg_prem_danger = 0.04;
-        tg_ang_att = 0.01;
-        tg_base_score = 1;
-        tg_prem_bonus = 20;
-        tg_prem_offs = 10;
-        tg_fire_thr = 0.3;
-        aggr_factor = 0.2;
-        aggr_lookahead = 2000;
-        team_force = 0.08;
-        team_dist = 200;
-        dng_ang_att = 20;
-        dng_lookahead = 50;
-        prem_danger = 0.1;
-        hit_danger = 200;*/
-
         crew_danger_att = 0.7;
         hull_danger_att = 0.15;
         ang_spd_account = 0.5;
@@ -365,8 +313,6 @@ const ShellInfo shell_info[] =
     ShellInfo(0.010, 40 / 3.0, PREMIUM_FIRE, 20)
 };
 
-
-
 inline double crew_danger(const Tank &tank)
 {
     return 1 - prm.crew_danger_att * tank.crew_health() / tank.crew_max_health();
@@ -395,7 +341,6 @@ struct FriendRef
     }
 };
 
-
 struct BonusRef
 {
     Vec2D pos;
@@ -414,7 +359,6 @@ struct BonusRef
     {
     }
 };
-
 
 struct Action
 {
@@ -1290,13 +1234,6 @@ void MyStrategy::Move(Tank self, World world, model::Move& move)
     size_t dir = field.samplePhys(self, moves, max_move);
     move.set_left_track_power(moves[dir][0]);
     move.set_right_track_power(moves[dir][1]);
-
-
-    /*if(world.tick() % 100 == 99)
-    {
-        clock_t old = global_time;  global_time = clock();
-        cout << "Time per tick: " << (global_time - old) * (10.0 / CLOCKS_PER_SEC) << "ms" << endl;
-    }*/
 }
 
 TankType MyStrategy::SelectTank(int tank_index, int team_size)
