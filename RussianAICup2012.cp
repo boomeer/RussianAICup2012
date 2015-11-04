@@ -1,7 +1,7 @@
 #include "MyStrategy.h"
 
 #define _USE_MATH_DEFINES
-#include <cmath>
+#include <math>
 #include <climits>
 #include <cstring>
 #include <limits>
