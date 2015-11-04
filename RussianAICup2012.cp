@@ -2,8 +2,8 @@
 
 #define _USE_MATH_DEFINES
 #include <math>
-#include <climits>
-#include <cstring>
+#include <limits>
+#include <string>
 #include <limits>
 #include <algorithm>
 #include <list>
