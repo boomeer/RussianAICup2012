@@ -9,8 +9,8 @@
 #include <list>
 #include <map>
 
-#include <iostream>  // DEBUG
-#include <iomanip>  // DEBUG
+#include <iostream>  // for DEBUG
+#include <iomanip>  // for DEBUG
 #include <ctime>  // DEBUG
 
 using namespace model;
